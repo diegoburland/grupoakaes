@@ -1,0 +1,16 @@
+.home{
+    background-color: red;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.banner--container{
+    padding-top: 4rem;
+}
+
+.banner--text{
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #0069ff;
+    font-weight: 100;
+}
