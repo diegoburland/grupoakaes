@@ -1,16 +1,21 @@
 .home{
-    background-color: red;
+    background: url(../../Resources/images/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     overflow-y: hidden;
 }
 
 .banner--container{
-    padding-top: 4rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .banner--text{
     font-size: 3rem;
     line-height: 4rem;
-    color: #0069ff;
+    color: #fff;
     font-weight: 100;
+    text-shadow: 0 1rem 3rem rgba(0,0,0,.175);  
 }
