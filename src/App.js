@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,12 +7,23 @@ import {
 import NavbarComponet from './Components/Navbar/NavbarComponent.jsx';
 import HomeComponet from './Pages/Home/Container.jsx';
 
+
+
 function App() {
+
+  const [company, setCompany] = useState('');
+
+  const handleLink = (e) => {
+    e.preventDefault();
+    const value = e.target.text;
+    setCompany(value);
+  }
+
   return (
     <Router>
-      <NavbarComponet name="TestTravels"/>
+      <NavbarComponet name="TestTravels" handleLink={handleLink}/>
       <Switch>
-        <Route path="/" component={HomeComponet}></Route>
+        <Route path="/" render={(props) => <HomeComponet {...props} company={company} />}></Route>
       </Switch>
     </Router>
   );

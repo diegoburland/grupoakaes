@@ -1,9 +1,10 @@
 import React from 'react';
 import HomeIndex from './Index';
 
-const HomeComponet = () => {
+const HomeComponet = ({company}) => {
+    
     return (
-        <HomeIndex/>
+        <HomeIndex company={company}/>
     );
   }
   
